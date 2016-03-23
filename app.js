@@ -16,11 +16,10 @@ function alertBreak() {
 
 function postToSlack(text) {
   var url = 'https://hooks.slack.com/services/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';
-  var message = text;
 
   $.ajax({
       data: 'payload=' + JSON.stringify({
-          "text": message,
+          "text": text,
           "channel": "slackpomodoro"
       }),
       dataType: 'json',
